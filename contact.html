@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="centered-content">
+                <h1 class="fade-in">Contact Us</h1>
+                <p class="fade-in">Use the form below to get in touch with us.</p>
+                <form action="process_form.php" method="POST">
+                    <!-- Username Section -->
+                    <div class="form-section fade-in">
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <!-- Email Section -->
+                    <div class="form-section fade-in">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <!-- Message Section -->
+                    <div class="form-section fade-in">
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                    </div>
+                    <!-- Send Button -->
+                    <input type="submit" value="Send" class="fade-in">
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

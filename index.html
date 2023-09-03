@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="centered-content">
+                <h1 class="fade-in">Welcome to Our Website</h1>
+                <p class="fade-in">We specialize in developing custom applications.</p>
+                <p class="fade-in">If you want to create your own PC app, please <a href="contact.html">contact us</a>.</p>
+                <h2 class="fade-in">Our Recent App: Apper</h2>
+                <p class="fade-in">Apper is an application that allows you to download apps by providing their download links. If a download is interrupted, you can refresh the page to continue the download.</p>
+                <img src="apper.png" alt="Apper Logo" width="200" class="fade-in">
+                <p class="download-button-container">
+                    <a href="https://drive.google.com/u/0/uc?id=17hhct7nWMt0z-YxvuueKhEGhjVUYdmrk&export=download" class="download-button fade-in" download>Download Apper</a>
+                </p>
+                
+                <!-- Add the new text here -->
+                <p class="fade-in">This is a trial test of the app. To try it, the token is: apper-132-trial</p>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var elements = document.querySelectorAll(".fade-in");
+            elements.forEach(function(el) {
+                el.classList.add("active");
+            });
+
+            setTimeout(function() {
+                var fadeOutElements = document.querySelectorAll(".fade-in");
+                fadeOutElements.forEach(function(el) {
+                    el.classList.remove("active");
+                    el.classList.add("fade-out");
+                });
+
+                // Add the animation to the download button's parent <p> element
+                var downloadButtonContainer = document.querySelector(".download-button-container");
+                if (downloadButtonContainer) {
+                    downloadButtonContainer.classList.add("active");
+                }
+            }, 5000); // Adjust the delay (5000 milliseconds = 5 seconds)
+        });
+    </script>
+
+
+</body>
+</html>
